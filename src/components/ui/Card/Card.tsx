@@ -37,7 +37,7 @@ const CardImage = forwardRef<HTMLImageElement, CardImageProps>(
   )
 );
 
-CardImage.displayName = "CardImage";
+CardImage.displayName = "Card.Image";
 
 const CardTitle = forwardRef<HTMLHeadingElement, TitleProps>(
   ({ className, ...props }, ref) => (
@@ -45,7 +45,7 @@ const CardTitle = forwardRef<HTMLHeadingElement, TitleProps>(
   )
 );
 
-CardTitle.displayName = "CardTitle";
+CardTitle.displayName = "Card.Title";
 
 export const Card = Object.assign(CardContainer, {
   Image: CardImage,

@@ -54,7 +54,7 @@ const BreadcrumbsItem = forwardRef<HTMLAnchorElement, BreadcrumbsItemProps>(
   }
 );
 
-BreadcrumbsItem.displayName = "BreadcrumbsItem";
+BreadcrumbsItem.displayName = "Breadcrumbs.Item";
 
 const Breadcrumbs = Object.assign(BreadcrumbsContainer, {
   Item: BreadcrumbsItem,

@@ -7,6 +7,8 @@ import React, {
 } from "react";
 import Link from "next/link";
 
+import { Space } from "../Space";
+
 import { ChevronRight } from "@/components/icons";
 import { cn } from "@/lib/styles";
 
@@ -20,9 +22,9 @@ const BreadcrumbsContainer = forwardRef<HTMLDivElement, BreadcrumbsProps>(
   ({ separator = <ChevronRight />, children, className, ...props }) => {
     return (
       <BreadcrumbsContext.Provider value={separator}>
-        <div className={cn("flex gap-3", className)} {...props}>
+        <Space size="sm" className={cn(className)} {...props}>
           {children}
-        </div>
+        </Space>
       </BreadcrumbsContext.Provider>
     );
   }

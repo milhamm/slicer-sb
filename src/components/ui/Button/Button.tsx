@@ -1,4 +1,4 @@
-import { Ref, forwardRef } from "react";
+import { forwardRef } from "react";
 
 import { cn, cva, VariantProps } from "@/lib/styles";
 
@@ -24,7 +24,7 @@ const buttonVariants = cva(
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants>;
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant, size, className, ...props }, ref) => (
     <button
       type="button"
@@ -38,3 +38,5 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
+
+export { Button };

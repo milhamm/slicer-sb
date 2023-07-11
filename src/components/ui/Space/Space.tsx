@@ -37,4 +37,4 @@ const Space = forwardRef<HTMLDivElement, SpaceProps>(
 
 Space.displayName = "Space";
 
-export { Space };
+export { Space, spaceVariants };

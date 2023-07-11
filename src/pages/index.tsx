@@ -1,6 +1,6 @@
 import { Source_Sans_3 } from "next/font/google";
 
-import { DefaultLayout } from "@/components/layouts";
+import { DefaultLayout } from "@/components/common/layouts";
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"] });
 

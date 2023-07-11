@@ -9,7 +9,7 @@ import Link from "next/link";
 
 import { Space } from "../Space";
 
-import { ChevronRight } from "@/components/icons";
+import { ChevronRight } from "@/components/common/icons";
 import { cn } from "@/lib/styles";
 
 const BreadcrumbsContext = createContext<ReactNode>(null);

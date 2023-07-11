@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/Navbar";
-import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { Button, Space, containerVariants } from "@/components/ui";
+import { Navbar } from "@/components/common/Navbar";
+import { Breadcrumbs } from "@/components/common/ui/Breadcrumbs";
+import { Button, Space, containerVariants } from "@/components/common/ui";
 import { cn } from "@/lib/styles";
 
 type DefaultLayoutProps = {

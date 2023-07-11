@@ -1,6 +1,8 @@
 import { ComponentProps, forwardRef } from "react";
 import Image from "next/image";
 
+import { Title, TitleProps } from "../Title";
+
 import { cn } from "@/lib/styles";
 
 export type CardProps = React.HTMLAttributes<HTMLDivElement>;
@@ -23,7 +25,7 @@ export type CardImageProps = ComponentProps<typeof Image>;
 
 const CardImage = forwardRef<HTMLImageElement, CardImageProps>(
   ({ className, alt, ...props }, ref) => (
-    <div className={cn("relative w-full h-52")}>
+    <div className={cn("relative w-full h-52 mb-6")}>
       <Image
         fill
         ref={ref}
@@ -37,6 +39,15 @@ const CardImage = forwardRef<HTMLImageElement, CardImageProps>(
 
 CardImage.displayName = "CardImage";
 
+const CardTitle = forwardRef<HTMLHeadingElement, TitleProps>(
+  ({ className, ...props }, ref) => (
+    <Title ref={ref} className={cn("mb-3")} {...props} />
+  )
+);
+
+CardTitle.displayName = "CardTitle";
+
 export const Card = Object.assign(CardContainer, {
   Image: CardImage,
+  Title: CardTitle,
 });

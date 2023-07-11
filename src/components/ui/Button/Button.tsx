@@ -7,7 +7,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-primary text-primary-foreground  ",
+        primary: "bg-primary text-primary-foreground",
         outline: "border border-primary text-primary",
       },
       size: {
@@ -24,18 +24,17 @@ const buttonVariants = cva(
 export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants>;
 
-const ButtonBase = (
-  { children, variant, size, className, ...props }: ButtonProps,
-  ref: Ref<HTMLButtonElement>
-) => (
-  <button
-    type="button"
-    ref={ref}
-    className={cn(buttonVariants({ variant, size, className }))}
-    {...props}
-  >
-    {children}
-  </button>
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, variant, size, className, ...props }, ref) => (
+    <button
+      type="button"
+      ref={ref}
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    >
+      {children}
+    </button>
+  )
 );
 
-export const Button = forwardRef(ButtonBase);
+Button.displayName = "Button";

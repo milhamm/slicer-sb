@@ -15,12 +15,13 @@ const buttonVariants = cva(
         ghost: "bg-transparent text-black",
       },
       size: {
-        lg: "h-10 px-4 py-2.5",
+        md: "h-10 px-4 py-2.5",
+        lg: "h-12 px-4 py-3.5",
       },
     },
     defaultVariants: {
       variant: "primary",
-      size: "lg",
+      size: "md",
     },
   }
 );

@@ -22,7 +22,7 @@ const BreadcrumbsContainer = forwardRef<HTMLDivElement, BreadcrumbsProps>(
   ({ separator = <ChevronRight />, children, className, ...props }) => {
     return (
       <BreadcrumbsContext.Provider value={separator}>
-        <Space size="sm" className={cn(className)} {...props}>
+        <Space size="default" className={cn("sm:gap-4", className)} {...props}>
           {children}
         </Space>
       </BreadcrumbsContext.Provider>

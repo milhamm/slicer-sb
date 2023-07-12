@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 import { VariantProps, cn, cva } from "@/lib/styles";
 
-const containerVariants = cva("max-w-screen-2xl mx-auto px-4");
+const containerVariants = cva("max-w-[1320px] mx-auto px-4");
 
 export type ContainerProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof containerVariants>;

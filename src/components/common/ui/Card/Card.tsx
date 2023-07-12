@@ -11,7 +11,11 @@ const CardContainer = forwardRef<HTMLDivElement, CardProps>(
   ({ className, children, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("w-full p-4 border border-stone-200 rounded", className)}
+      className={cn(
+        "w-full p-2 border border-stone-200 rounded-lg",
+        "sm:p-4",
+        className
+      )}
       {...props}
     >
       {children}
@@ -25,7 +29,7 @@ export type CardImageProps = ComponentProps<typeof Image>;
 
 const CardImage = forwardRef<HTMLImageElement, CardImageProps>(
   ({ className, alt, ...props }, ref) => (
-    <div className={cn("relative w-full h-52 mb-6")}>
+    <div className={cn("relative w-full h-40 mb-3", "sm:mb-6 sm:h-52")}>
       <Image
         fill
         ref={ref}
@@ -41,7 +45,7 @@ CardImage.displayName = "Card.Image";
 
 const CardTitle = forwardRef<HTMLHeadingElement, TitleProps>(
   ({ className, ...props }, ref) => (
-    <Title ref={ref} className={cn("mb-3")} {...props} />
+    <Title ref={ref} className={cn("mb-1", "sm:mb-3", className)} {...props} />
   )
 );
 
